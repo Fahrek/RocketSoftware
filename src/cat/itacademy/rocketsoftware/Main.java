@@ -11,10 +11,7 @@ public class Main {
         rocket1.addPropeller(80);
         
         System.out.print(rocket1.getIdRocket() + ": ");
-        System.out.println(rocket1.speedUp(80));
-        System.out.println(rocket1.speedUp(80));
-        System.out.println(rocket1.speedUp(80));
-        System.out.println(rocket1.getCurrentPotency());
+        System.out.println(rocket1.
         
         System.out.println("");
         

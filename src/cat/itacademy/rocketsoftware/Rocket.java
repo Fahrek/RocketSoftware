@@ -13,17 +13,13 @@ public class Rocket {
         if (idRocket.equals("")) {
             throw new Exception("Unicament es poden afegir lletres de la A a la Z en majuscules combinats o no amb numeros");
         }
-        this.idRocket       = idRocket;
-        this.propellers     = new ArrayList();
+        this.idRocket   = idRocket;
+        this.propellers = new ArrayList();
     }
 
     //Getters
     public String getIdRocket() {
         return idRocket;
-    }
-    
-    public int getCurrentPotency(){
-        return currentPotency;
     }
 
     //Setters
@@ -35,22 +31,22 @@ public class Rocket {
     }
 
     //Methods
-    public int speedUp(int maxPotency) throws Exception {
-        if(currentPotency + 10 > maxPotency){
+    public int speedUp() throws Exception {
+        if (currentPotency + 10 > maxPotency) {
             throw new Exception("La potencia actual no pot superar la potencia maxima del propulsor");
-        }else{
+        } else {
             return currentPotency += 10;
         }
     }
 
     public int speedDown() throws Exception {
-        if(currentPotency - 10 < 0){
+        if (currentPotency - 10 < 0) {
             throw new Exception("La potencia no pot ser inferior a 0");
-        }else{
+        } else {
             return currentPotency -= 10;
         }
     }
-    
+
     public void addPropeller(int potency) {
         propellers.add(new Propeller(potency));
     }
@@ -70,10 +66,6 @@ public class Rocket {
         return idRocket + ": " + propellers;
     }
 }
-
-
-
-
 
 
 

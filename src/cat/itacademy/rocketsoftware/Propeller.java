@@ -3,9 +3,14 @@ package cat.itacademy.rocketsoftware;
 public class Propeller {
 
     int maxPotency;
+    int currentPotency = 0;
 
     public Propeller(int maxPotency) {
         this.maxPotency = maxPotency;
+    }
+    
+    public int getCurrentPotency() {
+        return currentPotency;
     }
 
     public int getMaxPotency() {
@@ -18,7 +23,7 @@ public class Propeller {
 
     @Override
     public String toString() {
-        return maxPotency + " ";
+        return "Potencia máxima: " + maxPotency + " Potencia Actual: " + currentPotency ;
     }
 }
 
