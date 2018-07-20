@@ -6,7 +6,6 @@ public class Rocket {
 
     //Atributes
     private String idRocket;
-    private int currentPotency;
     private List<Propeller> propellers;
 
     //Constructor
@@ -16,7 +15,6 @@ public class Rocket {
         }
         this.idRocket       = idRocket;
         this.propellers     = new ArrayList();
-        this.currentPotency = 0;
     }
 
     //Getters
@@ -55,11 +53,6 @@ public class Rocket {
     
     public void addPropeller(int potency) {
         propellers.add(new Propeller(potency));
-    }
-    
-    public Propeller getMaxPotency(int index){
-        Propeller maxPotency = propellers.get(index);
-        return maxPotency;
     }
 
     public void getPropList() {
@@ -121,10 +114,15 @@ public class Rocket {
 //        this.numPropeller = numPropeller;
 //        this.propeller = prop;
 //    }
+//    public Propeller getMaxPotency(int index){
+//        Propeller maxPotency = propellers.get(index);
+//        return maxPotency;
+//    }
 //    public void callPropeller(int powNum){
 //        Propeller prop = new Propeller();
 //        prop.addPotency(powNum);
 //    }
+
 //    ArrayList<Integer> numProp = new ArrayList<>();
 //    public Integer getNumProp(int p){
 //        return numProp.get(p);
